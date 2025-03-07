@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+</head>
+<body>
+    <h1>결과 페이지</h1>
+    <h3 th:text="${message}"></h3>
+    <div th:if="${img != null}">
+        <img th:src="${img}" width="200" height="200" th:alt="${singleFileDescription}">
+        <p th:text="${singleFileDescription}"></p>
+    </div>
+    <div th:if="${imgs != null}">
+        <th:block th:each="img : ${imgs}">
+            <img th:src="${img}" width="150" height="150" th:alt="${multiFileDescription}">
+        </th:block>
+        <p th:text="${multiFileDescription}"></p>
+    </div>
+</body>
+</html>

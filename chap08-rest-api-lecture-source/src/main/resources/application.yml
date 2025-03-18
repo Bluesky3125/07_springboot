@@ -1,0 +1,12 @@
+server:
+  port: 8080
+
+# 파일 업로드 시 필요한 설정
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  web:
+    resources:
+      static-locations: file:///C:/uploadFiles
